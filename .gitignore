@@ -1,0 +1,12 @@
+bin/
+obj/
+out/
+*.user
+.vs/
+.env
+*.svg
+ROADMAP.md
+docs/
+plans/
+handoff*
+_unreleased/
