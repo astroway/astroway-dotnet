@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Astroway</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <PackageId>Astroway.Sdk</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>AstroWay</Authors>
+    <Company>AstroWay</Company>
+    <Description>Official .NET client for the AstroWay astrology API: natal charts, synastry, transits, Vedic dashas, Human Design, Tarot, numerology, SVG chart wheels and 700+ more endpoints.</Description>
+    <PackageTags>astrology;horoscope;natal-chart;synastry;vedic;api;sdk</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://api.astroway.info/sdk/csharp/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/astroway/astroway-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Deterministic>true</Deterministic>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Astroway.Tests" />
+  </ItemGroup>
+</Project>
