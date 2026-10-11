@@ -24,7 +24,7 @@ namespace Astroway;
 public sealed partial class AstrowayClient : IDisposable
 {
     /// <summary>SDK version, sent in the User-Agent.</summary>
-    public const string SdkVersion = "0.1.0";
+    public const string SdkVersion = "0.2.0";
 
     /// <summary>Production API root.</summary>
     public const string DefaultBaseUrl = "https://api.astroway.info/v1";
